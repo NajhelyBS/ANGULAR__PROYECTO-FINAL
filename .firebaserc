@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "angular-proyectofinal-511cf"
+  },
+  "targets": {
+    "angular-proyectofinal-511cf": {
+      "hosting": {
+        "proyecto-final": [
+          "angular-proyectofinal-511cf"
+        ]
+      }
+    }
   }
 }
