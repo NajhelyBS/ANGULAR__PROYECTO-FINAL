@@ -1,1 +1,54 @@
-<p>add-product works!</p>
+<body class="mt-5">
+    
+
+<form class="contenedor rounded-3 " [formGroup]="RegistroProduct" (ngSubmit)="onSubmit()">
+
+    <h1>Añadir nuevo producto a la lista</h1>
+    
+    <div class="row mt-2">
+
+        <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Producto"
+        formControlName="producto"></div>
+        <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Costo"
+        formControlName="costo">
+        </div>
+        <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Oferta"
+        formControlName="oferta">
+        </div>
+    </div>
+
+    <div class="row mt-4">
+
+        <div class="col-md-12">
+            <textarea class="form-control"
+            formControlName="descripcion" 
+            placeholder="Descripción"
+            id="exampleFormControlTextarea1" rows="3"></textarea>
+        
+        </div>
+        
+    </div>
+
+    <div class="row mt-4">
+
+        <div class="col-md-12">
+           <input type="text" class="form-control" 
+           formControlName="imagen"
+           placeholder="Imagen-URL">
+        </div>
+        
+    </div>
+
+    <button mat-raised-button 
+     color="primary" class="mt-4" 
+     >Añadir producto</button>
+ 
+    
+
+
+</form>
+
+</body>

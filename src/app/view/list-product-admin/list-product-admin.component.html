@@ -1,1 +1,35 @@
-<p>list-product-admin works!</p>
+<div class="mt-4">
+    <h1 class="text-center">Lista de Artículos</h1>
+    </div>
+    
+    <div class="container mb-5 contenedor mt-2">
+        <table class="rounded">
+          <thead >
+              <tr class=" border">
+                  <th class="text-center py-3" id="title" style="width: 15%;">Producto</th>
+                  <th class="text-center py-3" id="title" style="width: 10%;">Costo</th>
+                  <th class="text-center py-3" id="title" style="width: 10%;">Oferta</th>
+                  <th class="text-center py-3" id="title" style="width: 42%;">Descripción</th>
+                  <th class="text-center py-3" id="title" style="width: 42%;">Imagen</th>
+                  <th class="text-center py-3" id="title">Eliminar</th>
+      
+              </tr>
+          </thead>
+          <tbody>
+              <tr  *ngFor="let prod of productos">
+                  <th class="border px-4 py-3" id="sub">{{ prod.producto }}</th>
+                  <th class="border px-4 py-3" id="sub">{{ prod.costo | currency : 'S/.' }}</th>
+                  <th class="border px-4 py-3" id="sub">{{ prod.oferta | currency : 'S/.'}}</th>
+                  <th class="border px-4 py-3" id="sub">{{prod.descripcion}}</th>
+                  <th class="border px-4 py-3" id="sub">
+                    <img src="{{prod.imagen}}" width="100%" height="100%">                  
+                  </th>
+                  <th class="border px-4 py-3" id="sub">
+                    <button mat-raised-button color="warn" class="form-control" (click)="Delete(prod)">Eliminar</button>
+                  </th>
+                </tr>
+          </tbody>
+      </table>
+    
+    </div>
+    

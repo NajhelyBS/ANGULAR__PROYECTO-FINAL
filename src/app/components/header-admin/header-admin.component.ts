@@ -9,7 +9,6 @@ export class HeaderAdminComponent {
 
 
   borrardata() {
-
-    
+  
   }
 }

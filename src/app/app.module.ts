@@ -7,6 +7,11 @@ import { ComponentsModule } from './components/components.module';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InicioModule } from './inicio/inicio.module';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { ViewModule } from './view/view.module';
+import { UserviewModule } from './userview/userview.module';
 
 var config: {
   apiKey: "AIzaSyDZBZCpy89wd8ajmFEYvyxGoI9TqzsTGm8",
@@ -26,8 +31,14 @@ var config: {
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
+    InicioModule,
+    ViewModule,
+    UserviewModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
