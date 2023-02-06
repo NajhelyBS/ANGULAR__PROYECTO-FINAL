@@ -23,7 +23,7 @@ export class ListProductComponent implements OnInit{
   constructor(
     private dialog:MatDialog,
     private productosservice:ProductServiceService,
-    private ruta:Router,
+    private router:Router,
     ){}
 
     openDialog():void {
@@ -44,8 +44,9 @@ export class ListProductComponent implements OnInit{
 
   }
 
+  Detalle(id:any){
+    alert(id);
+    this.router.navigate(['/home'])
 
-  Detalle(){
-    
   }
 }

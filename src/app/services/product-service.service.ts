@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { collectionData, Firestore } from '@angular/fire/firestore';
-import { addDoc, collection, deleteDoc, doc } from '@firebase/firestore';
+import { addDoc, collection, deleteDoc, doc,  getDoc  } from '@firebase/firestore';
 import { Observable } from 'rxjs';
 import { Product } from '../interfaces/product';
 
@@ -27,4 +27,9 @@ export class ProductServiceService {
     return deleteDoc(productosRef);
   }
 
+  async getDetalleProducto(documentId: string) {
+    const docRef = doc(this.fireStore, "productos", documentId);
+    const docSnap = await getDoc(docRef);
+    return docSnap.data()
+  }
 }

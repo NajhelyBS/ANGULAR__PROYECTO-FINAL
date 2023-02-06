@@ -18,11 +18,12 @@
           <tbody>
               <tr  *ngFor="let prod of productos">
                   <th class="border px-4 py-3" id="sub">{{ prod.producto }}</th>
-                  <th class="border px-4 py-3" id="sub">{{ prod.costo | currency : 'S/.' }}</th>
+                  <th class="border px-4 py-3" id="sub"
+                  style="text-decoration: dashed;">{{ prod.costo | currency : 'S/.' }}</th>
                   <th class="border px-4 py-3" id="sub">{{ prod.oferta | currency : 'S/.'}}</th>
                   <th class="border px-4 py-3" id="sub">{{prod.descripcion}}</th>
                   <th class="border px-4 py-3" id="sub">
-                    <img src="{{prod.imagen}}" width="100%" height="100%">                  
+                    <img src="{{prod.imagen}}" width="100%" height="130px">                  
                   </th>
                   <th class="border px-4 py-3" id="sub">
                     <button mat-raised-button color="warn" class="form-control" (click)="Delete(prod)">Eliminar</button>

@@ -15,6 +15,9 @@ import { AgregarcompraComponent } from './agregarcompra/agregarcompra.component'
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatCommonModule } from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
+import { Router, RouterLink } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -36,12 +39,16 @@ import {MatMenuModule} from '@angular/material/menu';
    MatDialogModule,
    MatMenuModule,
    MatCommonModule,
+   RouterLink,
+   RouterLinkActive,
+   RouterModule,
   ],
   exports: [
     AddProductComponent,
     ListProductAdminComponent,
     ListProductComponent,
     AgregarcompraComponent,
+    DetalleComponent,
   ]
 })
 export class ViewModule { }
